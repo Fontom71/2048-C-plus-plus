@@ -8,6 +8,7 @@
 Plateau::Plateau(int taille)
 {
     this->taille = taille;
+    score = 0;
 
     // Allocation de mémoire pour le plateau
     plateau = new int *[taille];
@@ -244,6 +245,7 @@ void Plateau::fusionnerCases(Direction direction)
 
                     // Ajoutez ici des mécanismes pour mettre à jour le score si nécessaire
                     // (par exemple, en fonction de la valeur fusionnée)
+                    score += 2 * valeurCourante;
 
                     // Avancez le pointeur j pour éviter de fusionner plusieurs fois la même paire
                     j = k;
@@ -257,4 +259,9 @@ bool Plateau::estCaseVide(int i, int j)
 {
     // Vérifie si la case à la position (i, j) est vide
     return plateau[i][j] == 0;
+}
+
+int Plateau::getScore()
+{
+    return score;
 }

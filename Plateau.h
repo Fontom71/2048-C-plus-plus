@@ -13,10 +13,12 @@ public:
     bool estDeplacable();
     void afficher();
     void nouvelleCase();
+    int getScore();
 
 private:
     int taille;
     int **plateau;
+    int score;
 
     void deplacerCases(Direction direction);
     void fusionnerCases(Direction direction);

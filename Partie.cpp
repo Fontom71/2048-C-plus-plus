@@ -34,6 +34,7 @@ void Partie::mouvement(Direction direction)
     plateau.mouvement(direction);
     // Ajoutez ici des mécanismes pour mettre à jour le score si nécessaire
     // (par exemple, en fonction des cases fusionnées ou des nouvelles cases ajoutées)
+    score += plateau.getScore();
     // Vous pouvez également ajouter d'autres mécanismes spécifiques à votre jeu.
     cptMouv++;
     // À compléter en fonction de votre logique de score.
